@@ -34,4 +34,10 @@ public class FarmerController {
         farmerService.deleteFarmer(id);
         return ResponseEntity.noContent().build();
     }
+
+    public String toDS() {
+        return "FarmerController{" +
+                "farmerService=" + farmerService +
+                '}';
+    }
 }
