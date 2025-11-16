@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: farmermart-elasticsearch
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/elastic_scarch?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+#  data:
+#    elasticsearch:
+#      client:
+#        elasticsearch-rest:
+#          uris: http://localhost:9200
+#      repositories:
+#        enabled: true
+#  main:
+#    allow-bean-definition-overriding: true
+
+server:
+  port: 8080
+#logging:
+#  level:
+#    root: INFO
+#    org.springframework: INFO
+logging:
+  file:
+    name: elk/logs/order-service.log   # Path relative to project root
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+
+
