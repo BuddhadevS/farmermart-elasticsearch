@@ -36,8 +36,6 @@ public class FarmerController {
     }
 
     public String toDS() {
-        return "FarmerController{" +
-                "farmerService=" + farmerService +
-                '}';
+        return "Hello java this is main elasticsearch";
     }
 }
